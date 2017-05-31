@@ -1,0 +1,64 @@
+1. Explain about the different complex data types in pig
+  
+  Complex Types: Pig supports complex data types. They are Tuple, Bag, Map, Atom, Relation.
+   * Atom: An atom is any single value, such as a string or a number — ‘Diego’, for example. Pig’s atomic values are scalar types that appear in 
+most programming languages — int, long, float, double, chararray and bytearray, for example.
+  * Tuple: A tuple is a record that consists of a sequence of fields. Each field can be of any type — ‘Diego’, ‘Gomez’, or 6, for example). Think 
+of a tuple as a row in a table.
+  * Bag: A bag is a collection of non-unique tuples. The schema of the bag is flexible — each tuple in the collection can contain an arbitrary 
+number of fields, and each field can be of any type.
+  * Map: A map is a collection of key value pairs. Any type can be stored in the value, and the key needs to be unique. The key of a map must 
+be a chararray and the value can be of any type.
+  * Relation: A relation is an outer bag of tuples. The relations in Pig Latin are unordered (there is no guarantee that tuples are processed 
+in any particular order).
+
+
+2. How can you interact with the shell in Apache pig?
+    We can interact Pig shell by
+      1. With Grunt Shell
+      2. Using Script Files
+    With Grunt Shell 
+      * Interactive Shell for executing Pig Commands 
+      * Used when script file is not provided
+      * Can execute scripts from Grunt via run or exec commands 
+    Using Script Files
+      * Executes Commands in a file • pig ScriptFile.pig 
+      * Pig commands are executed using script files as batch Jobs
+
+3. Explain how pig differs from Map reduce:
+Pig just a higher abstraction of the map reduce
+    * Less complex codes to type 
+    * Easy to learn pig latin than that of Java.
+    * Many built in functions.
+    * People of non-programming background an also use pig easily.
+    * Map reduce takes more time construct the code.
+    * 1/20 lines of code are needed than that map reduce
+
+4. Explain how pig differs from sql:
+    In SQL, when users want to do several data operations together, they must either write separate queries, storing the intermediate data 
+into temporary tables, or write it in one query using subqueries inside that query to do the earlier steps of the processing. 
+    * Pig, however, is designed with a long series of data operations in mind, so there is no need to write the data pipeline in an inverted 
+set of subqueries or to worry about storing data in temporary tables. 
+    * SQL is designed for the RDBMS environment, where data is normalized and schemas and proper constraints are enforced (that is, there are
+no nulls in places they do not belong, etc.). 
+    * Pig is designed for the Hadoop data-processing environment, where schemas are sometimes unknown or inconsistent. Pig does not require 
+data to be loaded into tables first. It can operate on data as soon as it is copied into HDFS. 
+
+5.	Explain the scalar data types in pig ?
+    * Int: An integer. Int are represented in interfaces by java.lang.Integer. They store a four byte signed integer. Constant integers are 
+expressed as integer numbers. 
+
+    * Long: A long integer. Long are represented in interfaces by java.lang.Long. They store eight byte signed integer. Constants are expressed 
+as integer numbers with L appended, for example 34L.
+
+    * Float: A floating point number. Floats are represented in interfaces by java.lang.Float. They store a four byte floating point number. 
+Constants are represented as floating point numbers with f appended, for example, 2.18f.
+
+    * Double: A double precision floating point number. Doubles are represented in interfaces by java.lang.Double. They store a eight byte floating
+point number. Constants are represented either as floating point numbers or in exponent notation, for example, 32.12567 or 3e-17.
+
+    * Chararray: A string or array of characters. Represented in interfaces by java.lang.String. Constant chararrays are represented by single 
+quotes, for example, 'constant chararray'.
+
+    * Bytearray: A blob or array of bytes. Represented by java class DataByteArray which wraps a java byte[]. There is no way to specify a 
+bytearray constant
